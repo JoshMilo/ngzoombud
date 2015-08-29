@@ -7,7 +7,6 @@ import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
   templateUrl: 'components/menu/menu.html'
 })
 
-
 export default class Menu {
   name: string;
   todos: string[];
