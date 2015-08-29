@@ -6,22 +6,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
+/// <reference path="typings/firebase/firebase.d.ts"/>
 var angular2_1 = require('angular2/angular2');
 var MyAppComponent = (function () {
     function MyAppComponent() {
-        this.name = 'Josh';
+        this.name = 'bob!';
+        this.todos = ["walk", "run", "eat", "sleep"];
+        // this.fb = new Firebase("https://zoombud.firebaseio.com/concentrates");
     }
+    MyAppComponent.prototype.getMenu = function () {
+        console.log('hi!');
+    };
     MyAppComponent = __decorate([
         angular2_1.Component({
-            selector: 'my-app'
+            selector: 'app'
         }),
         angular2_1.View({
-            template: '<h1>Hello {{ name }}</h1>'
-        }), 
-        __metadata('design:paramtypes', [])
+            template: "\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n        <h1>Hello {{ name }}</h1>\n        <p>friends</p>\n        <ul>\n          <li *ng-for=\"#todo of todos\">\n          {{todo}}\n          </li>\n        </ul>\n        <input #todotext>\n        <button (click)=\"getMenu(todotext.value)\">click</button>\n      </div>\n    </div>\n    ",
+            directives: [angular2_1.NgFor]
+        })
     ], MyAppComponent);
     return MyAppComponent;
 })();
