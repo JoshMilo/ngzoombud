@@ -1,5 +1,5 @@
-/// <reference path="typings/firebase/firebase.d.ts"/>
 import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
+import Menu from 'components/menu/menu'
 
 @Component({
   selector: 'app'
@@ -13,8 +13,7 @@ import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
       </div>
     </div>
     `,
-    directives: [NgFor,
-      ]
+    directives: [NgFor, Menu]
 })
 
 // Component controller

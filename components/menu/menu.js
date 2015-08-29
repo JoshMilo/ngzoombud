@@ -10,27 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var menu_1 = require('components/menu/menu');
-var MyAppComponent = (function () {
-    function MyAppComponent() {
-        this.name = 'bob!';
-        this.todos = ["walk", "run", "eat", "sleep"];
-        // this.fb = new Firebase("https://zoombud.firebaseio.com/concentrates");
+var Menu = (function () {
+    function Menu() {
     }
-    MyAppComponent.prototype.getMenu = function () {
-        console.log('hi!');
-    };
-    MyAppComponent = __decorate([
+    Menu = __decorate([
         angular2_1.Component({
-            selector: 'app'
+            selector: 'menu'
         }),
         angular2_1.View({
-            template: "\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n        <h1>Menu</h1>\n        <menu></menu>\n      </div>\n    </div>\n    ",
-            directives: [angular2_1.NgFor, menu_1.default]
+            templateUrl: 'components/menu/menu.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], MyAppComponent);
-    return MyAppComponent;
+    ], Menu);
+    return Menu;
 })();
-angular2_1.bootstrap(MyAppComponent);
-//# sourceMappingURL=app.js.map
+exports.default = Menu;
+angular2_1.bootstrap(Menu);
+//# sourceMappingURL=menu.js.map
