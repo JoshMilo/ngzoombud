@@ -1,3 +1,19 @@
 app {
 	display: block;
 }
+menu {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+#menu .list-group-item {
+	padding: 0;
+	border: 0;
+	vertical-align: middle;
+}
+#menu .input-group .form-control {
+	min-width: 100px;
+}
+#menu .input-group-addon {
+	width: 100%;
+}
