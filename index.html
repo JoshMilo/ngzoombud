@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <script src="https://github.jspm.io/jmcriffey/bower-traceur-runtime@0.0.87/traceur-runtime.js"></script>
-    <script src="https://jspm.io/system@0.16.js"></script>
-    <script src="http://code.angularjs.org/2.0.0-alpha.35/angular2.dev.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
-  <body>
-    <app class="container"><menu></menu></app>
+<html>
+<head>
+    <title>Demo App</title>
+    <!-- systemJS loader and config -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+</head>
+<body>
+    <!-- our angular2 component -->
+    <test-app>
+        Loading... bitches
+    </test-app>
+
+    <!-- import and run our app -->
     <script>
-      System.import('app');
+      System.import('/src');
     </script>
-  </body>
+</body>
 </html>

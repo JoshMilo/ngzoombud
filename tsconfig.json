@@ -1,14 +1,13 @@
 {
-  "compilerOptions": {
-	"module": "commonjs",
-	"noImplicitAny": false,
-	"sourceMap": true,
-	"emitDecoratorMetadata": true,
-	"experimentalDecorators": true,
-	"target": "ES5",
-	"watch": true
-  },
-  "exclude": [
-	"node_modules"
-  ]
+	"compilerOptions": {
+		"module": "system",
+		"target": "ES5",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"sourceMap": false
+	},
+	"filesGlob": [
+		"./**/*.ts",
+		"!./jspm_packages/**/*.ts"
+	]
 }

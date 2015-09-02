@@ -1,17 +1,19 @@
 {
-  "name": "ngzoom",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "angular2": "^2.0.0-alpha.35",
-    "express": "^4.13.3",
-    "firebase": "^2.2.9"
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "angular2": "npm:angular2@^2.0.0-alpha.36",
+      "axios": "npm:axios@^0.5.4",
+      "crypto": "github:jspm/nodelibs-crypto@^0.1.0",
+      "es6-shim": "github:es-shims/es6-shim@^0.33.3",
+      "fetch": "github:github/fetch@^0.9.0",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.0",
+      "ts": "github:frankwallis/plugin-typescript@^2.0.11",
+      "whatwg-fetch": "npm:whatwg-fetch@^0.9.0",
+      "zone.js": "npm:zone.js@^0.5.4"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@1.5.3"
+    }
   }
 }

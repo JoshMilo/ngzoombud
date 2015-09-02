@@ -4,17 +4,11 @@ import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
   selector: 'menu'
 })
 @View({
-  templateUrl: 'components/menu/menu.html'
+  template: `<p>I'm a big boob</p>`
 })
-
-export default class Menu {
-  name: string;
-  todos: string[];
-  fb: any;
-  
+export class Menu {
+ 
   constructor() {
     
   }
 }
-
-bootstrap(Menu);
