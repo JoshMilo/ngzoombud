@@ -4,41 +4,26 @@ import 'reflect-metadata';
 import 'es6-shim';
 import 'zone.js';
 import 'fetch';
-import {Menu} from './components/menu';
+import { Menu } from './components/menu';
 
-import {
-  Component,
-  View,
-  bootstrap
-} from 'angular2/angular2';
-
-// @Component({
-//   selector: 'menu'
-// })
-// @View({
-//   template: `<p>I'm a boob</p>`
-// })
-// export default class Menu {
- 
-//   constructor() {
-    
-//   }
-// }
-
-
-
+import { Component, View, bootstrap } from 'angular2/angular2';
 
 /**
  * TestApp Class
+ * 
  */
 @Component({
-  selector: 'test-app'
+  selector: 'ngzoombud'
 })
 @View({
-  template: '<h4>Hello {{name}}</h4> <br/><menu></menu>',
+  template: `
+    <h1>ZoomBud</h1>
+    <small>Your personal delivery app</small>
+    <menu></menu>
+  `,
   directives: [Menu]
 })
-class TestApp {
+class Main {
   name: string;
   checkStatus: any;
   parseJSON: any;
@@ -61,5 +46,5 @@ class TestApp {
 }
 
 
-bootstrap(TestApp);
+bootstrap(Main);
 
