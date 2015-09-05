@@ -119,7 +119,27 @@
   ],
   "edibles": [
     {
-      "name": "Cannabee Gummy Bears"
+      "name": "Cannabee Gummy Bears",
+      "type": "Rick Simpson Oil",
+      "formfactor": "candy",
+      "price": [
+        20
+      ]
+    },
+    {
+      "name": "High Chews",
+      "formfactor": "candy",
+      "type": "unknown",
+      "price": [
+        30
+      ]
+    },
+    {
+      "name": "RSO Capsules",
+      "formfactor": "capsules",
+      "price": [
+        10
+      ]
     }
   ]
 }

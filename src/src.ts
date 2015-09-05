@@ -4,45 +4,61 @@ import 'reflect-metadata';
 import 'es6-shim';
 import 'zone.js';
 import 'fetch';
-import { Menu } from './components/menu';
+import { FlowerMenu } from './components/flower-menu';
 
 import { Component, View, bootstrap } from 'angular2/angular2';
 
 /**
- * TestApp Class
- * 
+ * Main Class
+ * The Top Level Component
  */
+ 
+ interface IData {
+   category?: string;
+ }
+ 
+ 
 @Component({
   selector: 'ngzoombud'
 })
 @View({
   template: `
-    <h1>ZoomBud</h1>
-    <small>Your personal delivery app</small>
-    <menu></menu>
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-12">
+            <h1>ZoomBud</h1>
+            <small>Your personal delivery app</small>
+          </div>
+      </div>
+    <flower-menu></flower-menu> 
+    </div>
   `,
-  directives: [Menu]
+  directives: [FlowerMenu]
 })
 class Main {
-  name: string;
-  checkStatus: any;
-  parseJSON: any;
+  data: any;
   
   constructor() {
-    this.name = 'Angular2';
+    this.data;
     // this.getData();
-  }
+  }  
     
-  // getData() {
-  //     window.fetch('http://localhost:3000/flowers')
-  //   .then(function(response) {
-  //     return response.json()
-  //   }).then(function(json) {
-  //     console.log('parsed json', json)
-  //   }).catch(function(ex) {
-  //     console.log('parsing failed', ex)
-  //   })
-  // }
+  getData() {
+    // var data: any;
+    window.fetch('http://localhost:3000/flowers')
+    .then(function(response) {
+      return response.json()
+    })
+    .then(function(json) {
+      console.log('parsed json', json)
+      this.data = json;
+      return this.data;
+    })
+    .catch(function(ex) {
+      throw new Error(`parsing failed: ${ex}`);
+    })
+  }
+  // getData(data: any);
 }
 
 
