@@ -29,8 +29,10 @@ System.config({
     "crypto": "github:jspm/nodelibs-crypto@0.1.0",
     "es6-shim": "github:es-shims/es6-shim@0.33.3",
     "fetch": "github:github/fetch@0.9.0",
+    "jquery": "github:components/jquery@2.1.4",
     "reflect-metadata": "npm:reflect-metadata@0.1.0",
     "ts": "github:frankwallis/plugin-typescript@2.0.11",
+    "twbs/bootstrap": "github:twbs/bootstrap@4.0.0-alpha",
     "typescript": "npm:typescript@1.5.3",
     "whatwg-fetch": "npm:whatwg-fetch@0.9.0",
     "zone.js": "npm:zone.js@0.5.4",
@@ -83,6 +85,9 @@ System.config({
     },
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
+    },
+    "github:twbs/bootstrap@4.0.0-alpha": {
+      "jquery": "github:components/jquery@2.1.4"
     },
     "npm:angular2@2.0.0-alpha.36": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
