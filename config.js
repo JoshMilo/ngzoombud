@@ -4,7 +4,8 @@ System.config({
   transpiler: "typescript",
   typescriptOptions: {
     "module": "amd",
-    "emitDecoratorMetaData": true
+    "emitDecoratorMetaData": true,
+    "experimentalDecorators": true
   },
   paths: {
     "github:*": "jspm_packages/github/*",

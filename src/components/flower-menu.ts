@@ -1,15 +1,6 @@
-import {Component, View, bootstrap, NgFor} from 'angular2/angular2';
-// import { MenuService } from '../services/menu-service';
+/// <reference path="../../typings/tsd.d.ts" />
 
-export class MenuService {
-  names: string[];
-  
-  constructor() {
-    this.names = ['bob', 'phil'];
-  }
-}
-
-
+import {Component, View, bootstrap, NgFor, Inject} from 'angular2/angular2';
 
 @Component({
   selector: 'flower-menu'
@@ -35,18 +26,13 @@ export class MenuService {
       </div>
     </li>
   </ul>
-  
-  <ul>
-    <li *ng-for="#name of names">{{ name }}</li>
-  </ul>
   `,
   directives: [NgFor]
 })
 export class FlowerMenu {
-  names: string[];
   
   constructor() {
-    this.names = ['bob', 'phil']
-    // this.names = MenuService.names;
   }
 }
+
+// bootstrap(FlowerMenu);

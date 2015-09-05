@@ -12,12 +12,6 @@ import { Component, View, bootstrap } from 'angular2/angular2';
  * Main Class
  * The Top Level Component
  */
- 
- interface IData {
-   category?: string;
- }
- 
- 
 @Component({
   selector: 'ngzoombud'
 })
@@ -36,29 +30,56 @@ import { Component, View, bootstrap } from 'angular2/angular2';
   directives: [FlowerMenu]
 })
 class Main {
-  data: any;
+  menuData: any;
+  leaflyData: any;
+  leafly: string;
+  config: any;
   
   constructor() {
-    this.data;
-    // this.getData();
+    this.menuData;
+    this.leaflyData;
+    this.leafly = "http://data.leafly.com/strains/blue-dream";
+    this.config = {
+      method: 'get',
+	    headers: {
+        APP_ID: "8ffd1a3f",
+			  APP_KEY: "b02174fd310ceb8da0f2989296593e95"
+		  }
+    }
+    // this.getMenuData();
+    this.getLeaflyData();
   }  
     
-  getData() {
-    // var data: any;
+    
+  getMenuData() {
     window.fetch('http://localhost:3000/flowers')
     .then(function(response) {
       return response.json()
     })
     .then(function(json) {
       console.log('parsed json', json)
-      this.data = json;
+      this.menuData = json;
       return this.data;
     })
     .catch(function(ex) {
       throw new Error(`parsing failed: ${ex}`);
     })
   }
-  // getData(data: any);
+  
+  getLeaflyData() {
+    window.fetch(this.leafly, this.config)
+    .then(function(response) {
+      return response.json()
+    })
+    .then(function(json) {
+      console.log('parsed json', json)
+      this.leaflyData = json;
+      return this.data;
+    })
+    .catch(function(ex) {
+      throw new Error(`parsing failed: ${ex}`);
+    })
+  }
 }
 
 
